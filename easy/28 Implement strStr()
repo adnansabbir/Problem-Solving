@@ -1,4 +1,4 @@
-# RunTime = O(n). Since we are itterating only one through out the hole string
+# RunTime = O(n). Since we are iterating only one through out the hole string
 
 
 class Solution:
