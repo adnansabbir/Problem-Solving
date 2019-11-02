@@ -7,10 +7,10 @@ class Solution:
         start = 0
         end = len(nums) - 1
 
-        if nums[start]>target:
+        if nums[start] > target:
             return start
-        elif nums[end]<target:
-            return end+1
+        elif nums[end] < target:
+            return end + 1
 
         while start <= end:
             mid = (start + end) // 2
