@@ -16,3 +16,5 @@ class Solution:
 
 solution = Solution()
 print(solution.twoSum([2, 7, 11, 15], 9))
+# RunTime -> O(n) as we are iterating through the nums array and
+# doing operation of checking iterated_values or storing values in O(1)
