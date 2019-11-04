@@ -3,23 +3,26 @@ class Solution:
         if not s or not len(s) or s == " ":
             return 0
 
-        length_of_string = len(s)
+        length_of_string = len(s) - 1
 
-        for i in range(length_of_string - 1, -1, -1):
-            if s[i] == ' ':
+        while length_of_string >= 0:
+            if s[length_of_string] == ' ':
                 length_of_string -= 1
             else:
                 break
 
-        numbers_in_last_word = 0
-        for i in range(length_of_string - 1, -1, -1):
-            if s[i] == ' ':
-                return numbers_in_last_word
+        length_of_last_word = 0
+        while length_of_string >= 0:
+            if s[length_of_string] == ' ':
+                return length_of_last_word
             else:
-                numbers_in_last_word += 1
+                length_of_string -= 1
+                length_of_last_word += 1
 
-        return numbers_in_last_word
+        return length_of_last_word
 
 
 solution = Solution()
-print(solution.lengthOfLastWord(' HelloWorlda '))
+print(solution.lengthOfLastWord('Hello Worlda'))
+
+# Time Complexity O(n) here n is the length of last word including ending space
