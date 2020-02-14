@@ -1,6 +1,6 @@
 def pashmak_and_garden():
     coordinates = [int(c) for c in input().split(' ')]
-    x1, y1, x2, y2 = coordinates[0], coordinates[1], coordinates[2], coordinates[3]
+    y1, x1, x2, y2 = coordinates[1], coordinates[0], coordinates[2], coordinates[3]
 
     Xd = abs(x1 - x2)
     Yd = abs(y1 - y2)
