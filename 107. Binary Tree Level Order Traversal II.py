@@ -74,15 +74,36 @@ t1.right = t3
 
 t4 = TreeNode(3)
 t5 = TreeNode(3)
-t3.left = t4
-t3.right = t5
+t2.left = t4
+t2.right = t5
 
-t6 = TreeNode(4)
-t7 = TreeNode(4)
-t4.left = t6
-t4.right = t7
 
-t6.right = None
+t6 = TreeNode(3)
+t7 = TreeNode(3)
+t3.left = t6
+t3.right = t7
+
+t8 = TreeNode(4)
+t9 = TreeNode(4)
+t10 = TreeNode(4)
+t11 = TreeNode(4)
+t12 = TreeNode(4)
+t13 = TreeNode(4)
+
+t4.left = t8
+t4.right = t9
+
+t5.left = t10
+t5.right = t11
+
+t6.left = t12
+t6.right = t13
+
+t14 = TreeNode(5)
+t15 = TreeNode(5)
+
+t8.left = t14
+t8.right = t15
 
 sol = Solution()
 print(sol.levelOrderBottom(t1))
