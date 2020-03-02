@@ -2,15 +2,17 @@ class Solution:
     def convertToTitle(self, n: int) -> str:
         alpha_num = ""
 
-        while n > 0:
+        while n:
             modVal = n % 26
             if modVal:
                 alpha_num += chr(64 + modVal)
 
-            if modVal == 0:
+            elif modVal == 0:
                 alpha_num += "Z"
 
-            n = (n // 26-1)
+            n = (n // 26)
+            if modVal == 0:
+                n -=1
 
         return alpha_num
 
