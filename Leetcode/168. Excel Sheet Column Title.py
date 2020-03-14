@@ -14,9 +14,9 @@ class Solution:
             if modVal == 0:
                 n -=1
 
-        return alpha_num
+        return alpha_num[::-1]
 
 
 sol = Solution()
-print(sol.convertToTitle(702))
+print(sol.convertToTitle(701))
 # print(ord('A'))
