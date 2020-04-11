@@ -1,5 +1,3 @@
-
-
 class MinStack:
 
     def __init__(self):
@@ -26,12 +24,12 @@ class MinStack:
 
 # Your MinStack object will be instantiated and called as such:
 obj = MinStack()
-obj.push(5)
-obj.push(3)
-obj.push(10)
-obj.push(2)
+# obj.push(x)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()
 
-print(obj.top())
-print(obj.getMin())
-obj.pop()
-print(obj.getMin())
+for i in range(0, 10, 1):
+    obj.push(i)
+
+# print(obj._stack)
