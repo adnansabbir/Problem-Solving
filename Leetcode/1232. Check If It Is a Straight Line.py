@@ -18,4 +18,4 @@ class Solution:
 
 sol = Solution()
 arr = [[-7, -3], [-7, -1], [-2, -2], [0, -8], [2, -2], [5, -6], [5, -5], [1, 7]]
-# print(sol.checkStraightLine(arr))
+print(sol.checkStraightLine(arr))
