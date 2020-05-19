@@ -1,6 +1,3 @@
-from typing import List
-
-
 class Solution:
     @staticmethod
     def findFrequency(phrase: str):
@@ -16,7 +13,7 @@ class Solution:
                 return False
         return True
 
-    def findAnagrams(self, s: str, p: str) -> List[int]:
+    def checkInclusion(self, p: str, s: str) -> bool:
         if not s or not p or len(s) < len(p):
             return []
 
@@ -25,22 +22,21 @@ class Solution:
 
         p_length = len(p)
         s_length = len(s)
-        anagram_indexes = []
 
         if self.compareFrequency(p_frequency, s_frequency):
-            anagram_indexes.append(0)
+            return True
 
         for index in range(1, (s_length - p_length + 1)):
             s_frequency[ord(s[index - 1]) - ord('a')] -= 1
             s_frequency[ord(s[index + p_length - 1]) - ord('a')] += 1
 
             if self.compareFrequency(p_frequency, s_frequency):
-                anagram_indexes.append(index)
+                return True
 
-        return anagram_indexes
+        return False
 
 
 sol = Solution()
-s = "eidbaooo"
-p = "ab"
-print(sol.findAnagrams(s, p))
+s1 = "a"
+s2 = "ab"
+print(sol.checkInclusion(s1, s2))
