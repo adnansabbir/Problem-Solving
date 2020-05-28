@@ -15,7 +15,6 @@ class Solution:
                 max_sub = max(max_sub, i - hash_count[count])
 
         return max_sub
-            # print(f'Num: {num}\t Max: {max_sub}\t Hash: {hash_count}')
 
 
 sol = Solution()
